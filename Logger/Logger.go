@@ -38,9 +38,7 @@ func (l *Logger) Error(data ...string) {
 	prefix := fmt.Sprintf("[%s]:", RedText("ERROR"))
 	l.lg.SetPrefix(prefix)
 	l.lg.Println(data)
-	//if l.isLogFile == true {
-	//
-	//}
+
 }
 
 func (l *Logger) Info(data ...string) {
@@ -56,11 +54,10 @@ func (l *Logger) Warn(data ...string) {
 }
 
 func (l *Logger) Debug(data ...string) {
-	if IsDebug {
-		prefix := fmt.Sprintf("[%s]:", "DEBUG")
-		l.lg.SetPrefix(prefix)
-		l.lg.Println(data)
-	}
+	prefix := fmt.Sprintf("[%s]:", "DEBUG")
+	l.lg.SetPrefix(prefix)
+	l.lg.Println(data)
+	
 }
 
 func (l *Logger) Success(data ...string) {
