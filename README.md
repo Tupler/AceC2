@@ -1,6 +1,8 @@
 # AceC2
 一款Go编写的远程控制C2服务器 
 
+## 废弃 
+
 # 服务端
 GO + net + GO-PROMPT
 实现功能:
